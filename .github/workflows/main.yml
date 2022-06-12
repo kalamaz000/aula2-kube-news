@@ -24,8 +24,8 @@ jobs:
       - name: Docker Login
         uses: docker/login-action@v2.0.0
         with:
-          username: ${{secrest.DOCKERHUB_USER}}
-          password: ${{secrest.DOCKERHUB_PWD}}
+          username: ${{secrets.DOCKERHUB_USER}}
+          password: ${{secrets.DOCKERHUB_PWD}}
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v3.0.0
